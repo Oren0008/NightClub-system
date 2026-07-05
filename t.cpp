@@ -104,7 +104,7 @@ int main() {
                             }
 
                         case 3: 
-                        cout << "Ur balance :  " << balance << '\n';
+                        cout << "Ur balance :  " << balance << "ur cash :   " << cash << '\n';
                         goto ATM_system;
             
                         default:
