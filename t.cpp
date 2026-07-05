@@ -129,14 +129,14 @@ int main() {
         cout << "do u wanna buy VIP CARD? Y/N \n";
         cin >> VIPANSW;
             
-            if (VIPANSW == 'Y' || VIPAns == 'y') {
+            if (VIPANSW == 'Y' || VIPANSW == 'y') {
                 if (balance >= VIPPRICE) {
                     balance = balance - VIPPRICE;
                     hasVIP = true;
                     cout << "bought success, ur balance:  " << balance << '\n';
                     goto start_system;
                 } else {
-                    cout << "balance not enough PLS go to ATM deposit \n";\
+                    cout << "balance not enough PLS go to ATM deposit \n";
                     goto start_system;
                 }
             } else {
