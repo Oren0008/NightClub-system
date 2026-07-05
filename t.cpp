@@ -43,7 +43,7 @@ int main() {
 
                 while(true) {
                 if ((VIPAns == 'Y' || VIPAns == 'y')) {
-                    if (hasVIP = true) {
+                    if (hasVIP == true) {
                     cout << "U CAN ENTER NOW!!" << endl;
                     return 0;
                     } else {
@@ -70,7 +70,7 @@ int main() {
                 cin >> ATMans;
 
                 if (ATMans == 4) {
-                    break;
+                    goto start_system;
                 }
 
                 switch(ATMans) {
@@ -80,7 +80,7 @@ int main() {
                         
                         if (deposit > cash) {
                             cout << "u have not enough balance CHECK UR BALANCE\n";
-                            break;
+                            goto ATM_system;
                         } else {
                             cash = cash - deposit;
                             balance = deposit + balance;
@@ -121,7 +121,7 @@ int main() {
         
     VIP_store:
 
-    int VIPANSW;
+    char VIPANSW;
     int VIPPRICE = 500;
 
         cout << "******* WELCOME TO VIP STORE *******" << '\n';    
@@ -129,7 +129,7 @@ int main() {
         cout << "do u wanna buy VIP CARD? Y/N \n";
         cin >> VIPANSW;
             
-            if (VIPAns == 'Y' || VIPAns == 'y') {
+            if (VIPANSW == 'Y' || VIPAns == 'y') {
                 if (balance >= VIPPRICE) {
                     balance = balance - VIPPRICE;
                     hasVIP = true;
